@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Penggunaan jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <button id="fadeInButton">Fade In</button>
+    <button id="fadeOutButton">Fade Out</button>
+    <div id="myElement" style="display: none">Elemen yang akan diubah</div>
+
+    <script>
+      $(document).ready(function () {
+        $("#fadeInButton").click(function () {
+          $("#myElement").fadeIn();
+        });
+
+        $("#fadeOutButton").click(function () {
+          $("#myElement").fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>

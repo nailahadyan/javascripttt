@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menampilkan Tanggal dan Waktu</title>
+  </head>
+  <body>
+    <h1>Waktu Sekarang:</h1>
+    <p id="waktu"></p>
+
+    <script>
+      function updateWaktu() {
+        const now = new Date();
+        const tanggal = now.toLocaleDateString();
+        const jam = now.getHours();
+        const menit = now.getMinutes();
+        const detik = now.getSeconds();
+
+        const waktuString = `${tanggal} ${jam}:${menit}:${detik}`;
+        document.getElementById("waktu").textContent = waktuString;
+      }
+
+      setInterval(updateWaktu, 1000);
+    </script>
+  </body>
+</html>
